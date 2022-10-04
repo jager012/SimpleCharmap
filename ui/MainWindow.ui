@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" idbasedtr="true">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>525</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string id="mainWindowTitle">Simple Charmap</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resources/SimpleCharmap.qrc">
+    <normaloff>:/SimpleCharmap/icon</normaloff>:/SimpleCharmap/icon</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,1,0">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>9</number>
+    </property>
+    <property name="topMargin">
+     <number>9</number>
+    </property>
+    <property name="rightMargin">
+     <number>9</number>
+    </property>
+    <property name="bottomMargin">
+     <number>9</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="fontLayout" stretch="0,1">
+      <property name="spacing">
+       <number>12</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="fontLabel">
+        <property name="text">
+         <string extracomment="Label" id="fontLabel">Font</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFontComboBox" name="fontComboBox">
+        <property name="insertPolicy">
+         <enum>QComboBox::NoInsert</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToContents</enum>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="currentFont">
+         <font>
+          <pointsize>11</pointsize>
+          <stylestrategy>PreferDefault</stylestrategy>
+          <kerning>false</kerning>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>false</bool>
+      </property>
+      <property name="handleWidth">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="left" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="groupFilter">
+          <property name="focusPolicy">
+           <enum>Qt::StrongFocus</enum>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string id="searchGroupHint">Search groups...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="GroupsTreeView" name="treeView">
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::DefaultContextMenu</enum>
+          </property>
+          <property name="horizontalScrollMode">
+           <enum>QAbstractItemView::ScrollPerPixel</enum>
+          </property>
+          <property name="autoExpandDelay">
+           <number>-1</number>
+          </property>
+          <property name="indentation">
+           <number>16</number>
+          </property>
+          <attribute name="headerVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="right" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="CharTableView" name="tableView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <kerning>false</kerning>
+           </font>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
+          <property name="autoScroll">
+           <bool>true</bool>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::DoubleClicked|QAbstractItemView::SelectedClicked</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="verticalScrollMode">
+           <enum>QAbstractItemView::ScrollPerItem</enum>
+          </property>
+          <property name="horizontalScrollMode">
+           <enum>QAbstractItemView::ScrollPerItem</enum>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>25</number>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>35</number>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderMinimumSectionSize">
+           <number>25</number>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>35</number>
+          </attribute>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="copyLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="textLabel">
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string extracomment="Label" id="copyCharactersLabel">Characters to copy</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>6</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="textEdit">
+        <property name="mouseTracking">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearButton">
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="statusTip">
+         <string extracomment="Status tip" id="clearButtonStatusTip">Clear the textbox.</string>
+        </property>
+        <property name="text">
+         <string extracomment="Button" id="clearButton">Clear</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="copyButton">
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="statusTip">
+         <string extracomment="Status tip" id="copyButtonStatusTip">Copy the textbox contents to clipboard.</string>
+        </property>
+        <property name="text">
+         <string extracomment="Button" id="copyButton">Copy</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string id="menuSettings">Settings</string>
+    </property>
+    <widget class="QMenu" name="menuDoubleClick">
+     <property name="title">
+      <string extracomment="Action" id="menuDoubleClick">Double click action</string>
+     </property>
+     <addaction name="actionCopyCell"/>
+     <addaction name="actionCopyText"/>
+     <addaction name="actionNoOp"/>
+    </widget>
+    <addaction name="menuDoubleClick"/>
+    <addaction name="separator"/>
+    <addaction name="actionRememberGroups"/>
+    <addaction name="actionRememberFont"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string id="menuHelp">?</string>
+    </property>
+    <addaction name="actionLicense"/>
+    <addaction name="separator"/>
+    <addaction name="actionAboutSimpleCharmap"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string id="menuView">View</string>
+    </property>
+    <widget class="QMenu" name="menuCellSize">
+     <property name="title">
+      <string id="menuCellSize">Table cell size</string>
+     </property>
+     <addaction name="actionCellSmall"/>
+     <addaction name="actionCellRegular"/>
+     <addaction name="actionCellLarge"/>
+     <addaction name="actionCellXL"/>
+    </widget>
+    <addaction name="actionAlwaysOnTop"/>
+    <addaction name="separator"/>
+    <addaction name="menuCellSize"/>
+   </widget>
+   <addaction name="menuView"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAboutQt">
+   <property name="text">
+    <string extracomment="Action" id="actionAboutQt">About Qt</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionAboutQtStatusTip">About Qt.</string>
+   </property>
+  </action>
+  <action name="actionAboutSimpleCharmap">
+   <property name="text">
+    <string extracomment="Action" id="actionAboutSimpleCharmap">About Simple Charmap</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionAboutSimpleCharmapStatusTip">About Simple Charmap.</string>
+   </property>
+  </action>
+  <action name="actionLicense">
+   <property name="text">
+    <string extracomment="Action" id="actionLicense">License</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionLicenseStatusTip">GNU General Public License v3.0</string>
+   </property>
+  </action>
+  <action name="actionAlwaysOnTop">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionAlwaysOnTop">Always on top</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionAlwaysOnTopStatusTip">This window will be kept on top of everything else.</string>
+   </property>
+   <property name="shortcut">
+    <string extracomment="Alt+T" id="actionAlwaysOnTopShortcut">Alt+T</string>
+   </property>
+  </action>
+  <action name="actionRememberGroups">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionRememberGroups">Remember groups</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionRememberGroupsStatusTip">The selected groups will be restored on startup.</string>
+   </property>
+  </action>
+  <action name="actionCopyCell">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionCopyCell">Copy selected character</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionCopyCellStatusTip">Only the selected character will be copied to clipboard.</string>
+   </property>
+  </action>
+  <action name="actionCopyText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionCopyText">Copy whole text</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionCopyTextStatusTip">The whole textbox content will be copied to clipboard.</string>
+   </property>
+  </action>
+  <action name="actionNoOp">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionNoOp">Do nothing</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionNoOpStatusTip">Disable double click.</string>
+   </property>
+  </action>
+  <action name="actionCellSmall">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionCellSmall">Small</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionCellSmallStatusTip">WARNING! Displaying many characters at once may impact scrolling performance.</string>
+   </property>
+   <property name="shortcut">
+    <string extracomment="Alt+S" id="actionCellSmallShortcut">Alt+S</string>
+   </property>
+  </action>
+  <action name="actionCellRegular">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionCellRegular">Regular</string>
+   </property>
+   <property name="shortcut">
+    <string extracomment="Alt+M" id="actionCellRegularShortcut">Alt+M</string>
+   </property>
+  </action>
+  <action name="actionCellLarge">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionCellLarge">Large</string>
+   </property>
+   <property name="shortcut">
+    <string extracomment="Alt+L" id="actionCellLargeShortcut">Alt+L</string>
+   </property>
+  </action>
+  <action name="actionCellXL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionCellXL">Extra Large</string>
+   </property>
+   <property name="shortcut">
+    <string extracomment="Alt+X" id="actionCellXLShortcut">Alt+X</string>
+   </property>
+  </action>
+  <action name="actionRememberFont">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string extracomment="Action" id="actionRememberFont">Remember font</string>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Status tip" id="actionRememberFontStatusTip">The selected font will be restored on startup.</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CharTableView</class>
+   <extends>QTableView</extends>
+   <header>CharTableView.h</header>
+   <slots>
+    <slot>changeFont(QFont)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>GroupsTreeView</class>
+   <extends>QTreeView</extends>
+   <header>GroupsTreeView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../resources/SimpleCharmap.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>about()</slot>
+  <slot>alwaysOnTop(bool)</slot>
+ </slots>
+</ui>

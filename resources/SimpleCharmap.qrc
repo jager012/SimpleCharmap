@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/SimpleCharmap">
+        <file alias="icon">../assets/icon.png</file>
+        <file alias="splash">../assets/splash.png</file>
+    </qresource>
+</RCC>

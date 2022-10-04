@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Simple Charmap
+GenericName=Character Map
+GenericName[it_IT]=Mappa caratteri
+Icon=accessories-character-map
+Exec=/opt/SimpleCharmap/SimpleCharmap
+Terminal=false
+StartupNotify=true
+Categories=QT;Utility;
